@@ -1,0 +1,1 @@
+execute if entity @e[type=armor_stand,tag=hyphae,nbt={HandItems:[{id:"minecraft:warped_hyphae"},{}]}] run say hi

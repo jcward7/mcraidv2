@@ -1,0 +1,1 @@
+execute if entity @e[type=item,nbt={Item:{id:"minecraft:warped_hyphae"}}] run tellraw @a {"text":"A Warped Core has finished energizing!","color":"aqua"}

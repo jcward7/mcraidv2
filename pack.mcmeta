@@ -1,0 +1,10 @@
+{
+    "__comment": "The datapack is assembled by Datapack Assembler",
+    "__link": "https://far.ddns.me",
+    "__patreon": "Thank you to Someone, NatNATTO, Andrew and CadeMade for the support on https://patreon.com/GalSergey",
+
+    "pack": {
+        "description": "this is a description",
+        "pack_format": 48
+    }
+}

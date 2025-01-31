@@ -1,0 +1,1 @@
+summon armor_stand ~ ~ ~ {NoGravity:1b,Tags:["warped_node"],attributes:[{id:"minecraft:scale",base:1.2}],ArmorItems:[{},{},{},{id:"minecraft:warped_wart_block",count:1}]}

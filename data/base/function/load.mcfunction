@@ -1,0 +1,2 @@
+scoreboard players add @e[tag=dummy] datapack_reloads 1
+execute as @e[tag=dummy] run tellraw @a [{"color":"yellow","text":"\nThis datapack has now been reloaded a total of "},{"bold":true,"color":"yellow","score":{"name":"@e[tag=dummy]","objective":"datapack_reloads"}},{"color":"yellow","text":" times."}]
