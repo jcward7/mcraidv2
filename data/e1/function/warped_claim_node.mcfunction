@@ -1,6 +1,7 @@
 execute as @e[tag=warped_node] at @e[tag=warped_node] run tag @e[type=player,sort=nearest] add warped
 execute as @e[tag=warped] run team join warped
 execute as @e[tag=warped] run effect give @e[tag=warped] glowing 2 0 true
+give @a[tag=warped,limit=1] warped_hyphae[custom_name='{"color":"white","italic":true,"text":"Raw Warped Hyphae"}',equippable={slot:"head",equip_sound:"block.beacon.activate",allowed_entities:"armor_stand",swappable:false}] 1
 execute at @e[tag=warped] run playsound minecraft:entity.ender_eye.death master @a ~ ~ ~ 100 0.25
 execute at @e[tag=warped] run particle minecraft:soul_fire_flame ~ ~0.75 ~ 0.75 0.75 0.75 0 150
 tp @e[tag=warped_node] -6 -61 -2

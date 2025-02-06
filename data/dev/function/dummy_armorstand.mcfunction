@@ -1,1 +1,0 @@
-summon armor_stand ~ ~ ~ {Invulnerable:1b,Invisible:1b,PersistenceRequired:1b,Tags:["dummy"]}

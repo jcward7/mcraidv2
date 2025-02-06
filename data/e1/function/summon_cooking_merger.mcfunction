@@ -1,0 +1,1 @@
+summon armor_stand ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Invisible:1b,PersistenceRequired:1b,Tags:["cooked_hyphae"],DisabledSlots:47,ArmorItems:[{},{},{},{id:"minecraft:warped_hyphae",count:1,components:{"minecraft:enchantment_glint_override":true,"minecraft:custom_name":'{"bold":true,"color":"dark_purple","text":"Cooked Warped Hyphae"}'}}]}

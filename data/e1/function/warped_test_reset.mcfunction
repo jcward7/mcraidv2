@@ -1,2 +1,2 @@
-tag @p remove warped
+tag @a remove warped
 team empty warped
