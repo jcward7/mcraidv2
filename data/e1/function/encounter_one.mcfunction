@@ -9,7 +9,7 @@ execute if entity @e[tag=dummy,scores={encounter1=40}] run setblock -4 -60 -2 re
 execute if entity @e[tag=dummy,scores={encounter1=40}] run tellraw @a[team=dev] {"text":"encounter_one: set a redstone block to begin warped_create_node","color":"yellow"}
 
 execute if entity @e[tag=dummy,scores={encounter1=200}] run function e1:summon_cooking_test
-execute if entity @e[type=armor_stand,tag=hyphae,nbt={ArmorItems:[{},{},{},{id:"minecraft:warped_hyphae",count:1,components:{"minecraft:equippable":{slot:"head",equip_sound:"block.beacon.activate",allowed_entities:"armor_stand",swappable:false},"minecraft:custom_name":'{"color":"white","italic":true,"text":"Raw Warped Hyphae"}'}}]}] run function e1:warped_cooking_test
+execute if entity @e[type=armor_stand,tag=hyphae,nbt={ArmorItems:[{},{},{},{id:"minecraft:warped_wart_block",count:1}]}] run function e1:warped_cooking_start
 
 execute if entity @e[tag=dummy,scores={encounter1=600..}] run tellraw @a[team=dev] {"text":"encounter_one: runtime has reached 30 seconds, resetting this encounter","color":"yellow"}
 execute if entity @e[tag=dummy,scores={encounter1=600..}] run kill @e[tag=hyphae]
