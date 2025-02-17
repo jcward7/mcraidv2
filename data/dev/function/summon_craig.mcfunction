@@ -1,0 +1,1 @@
+summon sheep ~ ~ ~ {PersistenceRequired:1b,Health:20f,Color:3b,Tags:["craig"],CustomName:'"Craig"',attributes:[{id:"minecraft:max_health",base:20},{id:"minecraft:scale",base:0.95f}]}

@@ -6,6 +6,6 @@ execute if entity @e[tag=dummy,scores={warpedCoreDeposit=10}] as @e[type=armor_s
 execute if entity @e[tag=dummy,scores={warpedCoreDeposit=10}] as @e[type=armor_stand,tag=east_deposit] if entity @e[type=armor_stand,tag=east_deposit,nbt={ArmorItems:[{},{},{},{id:"minecraft:warped_hyphae",count:1}]}] run attribute @s minecraft:scale base set 1.5
 execute if entity @e[tag=dummy,scores={warpedCoreDeposit=10}] as @e[type=armor_stand,tag=south_deposit] if entity @e[type=armor_stand,tag=south_deposit,nbt={ArmorItems:[{},{},{},{id:"minecraft:warped_hyphae",count:1}]}] run attribute @s minecraft:scale base set 1.5
 execute if entity @e[tag=dummy,scores={warpedCoreDeposit=10}] as @e[type=armor_stand,tag=west_deposit] if entity @e[type=armor_stand,tag=west_deposit,nbt={ArmorItems:[{},{},{},{id:"minecraft:warped_hyphae",count:1}]}] run attribute @s minecraft:scale base set 1.5
-execute if entity @e[tag=dummy,scores={warpedCoreDeposit=20}] run function e1:summon_well_keeper
+execute if entity @e[tag=dummy,scores={warpedCoreDeposit=20}] run schedule function e1:summon_well_keeper 3s
 execute if entity @e[tag=dummy,scores={warpedCoreDeposit=60..}] run setblock -4 -60 6 air
 execute if entity @e[tag=dummy,scores={warpedCoreDeposit=60..}] run scoreboard players set @e[tag=dummy] warpedCoreDeposit 0

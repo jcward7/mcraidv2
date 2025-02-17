@@ -6,3 +6,5 @@ execute store result score @e[tag=crimsonWell] devDisplay run scoreboard players
 execute store result score @e[tag=warpedWell] devDisplay run scoreboard players get @e[tag=dummy,limit=1] warpedWell
 execute store result score @e[tag=dummy] wellkeepersKilled run scoreboard players get @a[limit=1] wellkeepersKilled
 execute store result score @e[tag=warpedCoreDeposit] devDisplay run scoreboard players get @e[tag=dummy,limit=1] warpedCoreDeposit
+execute store result score @e[tag=craig] devDisplay run scoreboard players get @e[tag=craig,limit=1] trueHealth
+execute store result score @e[tag=micheal] devDisplay run scoreboard players get @e[tag=micheal,limit=1] trueHealth

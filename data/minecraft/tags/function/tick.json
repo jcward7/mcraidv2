@@ -1,9 +1,9 @@
 {
     "values": [
 		"dev:devdisplay",
-        "e1:boss_craig",
-		"e1:boss_micheal",
-		"e1:boss_health_sync_check",
+        "dev:boss_craig",
+		"dev:boss_micheal",
+		"dev:boss_health_sync_check",
 		"e1:warped_node_check"
     ]
 }
