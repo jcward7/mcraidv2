@@ -1,0 +1,21 @@
+{
+  "criteria": {
+    "mcraidv2": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "player": {
+          "type": "minecraft:player"
+        },
+        "damage": {
+          "blocked": false,
+          "source_entity": {
+            "type": "#base:enemy_combatants"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "dev:combat_check"
+  }
+}

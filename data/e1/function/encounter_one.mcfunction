@@ -29,8 +29,8 @@ execute if entity @e[scores={wellkeepersKilled=1..,crimsonWell=0,warpedWell=1}] 
 execute if entity @e[scores={wellkeepersKilled=1..,crimsonWell=0,warpedWell=1}] run fill 264 118 176 264 118 172 minecraft:polished_blackstone_stairs[facing=west]
 execute if entity @e[scores={wellkeepersKilled=1..,crimsonWell=0,warpedWell=1}] run tellraw @a {"text":"A Warped Well opens..."}
 
-execute as @e[type=player] at @e[type=player] if block ~ ~-1 ~ minecraft:warped_planks run function e1:use_well
-execute as @e[type=player] at @e[type=player] if block ~ ~-1 ~ minecraft:crimson_planks run function e1:use_well
+execute as @a if predicate e1:warped_well_check run function e1:use_well
+execute as @a if predicate e1:crimson_well_check run function e1:use_well
 execute if entity @e[scores={wellkeepersKilled=1..}] run scoreboard players set @a wellkeepersKilled 0
 
 execute if entity @e[tag=dummy,scores={encounter1=200}] run function e1:summon_cooking_test
