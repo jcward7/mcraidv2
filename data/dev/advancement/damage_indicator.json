@@ -1,0 +1,11 @@
+{
+    "criteria": {
+        "indicator": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {}
+        }
+    },
+    "rewards": {
+        "function": "dev:prepare_damage_indicator"
+    }
+}

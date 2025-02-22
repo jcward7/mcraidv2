@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "stats": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "#base:enemy_combatants"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "stats:enemy_combatants_killed"
+  }
+}

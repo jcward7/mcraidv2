@@ -1,0 +1,1 @@
+summon zombie ~ ~ ~ {Silent:1b,CustomNameVisible:1b,DeathLootTable:"minecraft:empty",Health:100f,Tags:["training_dummy"],CustomName:'"Training Dummy"',active_effects:[{id:"minecraft:regeneration",amplifier:10,duration:-1,show_particles:0b}],attributes:[{id:"minecraft:max_health",base:100}]}
