@@ -17,6 +17,6 @@
         }
     },
     "rewards": {
-        "function": "dev:prepare_ranged_indicator"
+        "function": "base:prepare_ranged_indicator"
     }
 }

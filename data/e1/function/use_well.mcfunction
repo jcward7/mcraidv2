@@ -1,4 +1,4 @@
-execute as @e[type=player] at @e[type=player] if block ~ ~-1 ~ minecraft:crimson_planks run setblock -4 -60 -2 redstone_block
+execute as @e[type=player] at @e[type=player] if block ~ ~-1 ~ minecraft:crimson_planks run schedule function e1:warped_temp_trigger 60t
 
 #Warped Well 1
 execute as @e[type=player] at @e[type=player] if block ~ ~-1 ~ minecraft:warped_planks if entity @e[tag=dummy,scores={crimsonWell=0,warpedWell=1}] run tp @s 212 134 182

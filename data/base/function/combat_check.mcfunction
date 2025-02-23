@@ -27,4 +27,4 @@ execute as @s[tag=!incombat] if entity @e[tag=dummy,scores={combatCounter=0}] ru
 execute as @s[tag=!incombat] if entity @e[tag=dummy,scores={combatCounter=0}] run scoreboard players add @e[tag=dummy] combatCounter 3
 
 tag @s[tag=!incombat] add incombat
-advancement revoke @s only dev:combat_check
+advancement revoke @s only base:combat_check

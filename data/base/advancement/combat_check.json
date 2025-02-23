@@ -16,6 +16,6 @@
     }
   },
   "rewards": {
-    "function": "dev:combat_check"
+    "function": "base:combat_check"
   }
 }

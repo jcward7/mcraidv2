@@ -4,7 +4,12 @@
         "dev:boss_craig",
 		"dev:boss_micheal",
 		"dev:boss_health_sync_check",
-		"dev:combatloop",
+		"base:combatloop",
+		"base:damage_indicator_check",
+		"base:random_crit",
+		"abilities:scan",
+		"abilities:empowering_spring",
+		"e1:warped_create_node",
 		"e1:warped_node_check"
     ]
 }

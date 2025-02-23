@@ -6,6 +6,6 @@
         }
     },
     "rewards": {
-        "function": "dev:prepare_damage_indicator"
+        "function": "base:prepare_damage_indicator"
     }
 }
