@@ -13,5 +13,5 @@ execute if entity @e[tag=dummy,scores={randomCritChance=1}] run playsound minecr
 scoreboard players set @e[tag=dummy] randomCritChance 0
 tag @s remove recentRanged
 tag @s remove recentDamager
-advancement revoke @s only dev:damage_indicator
-advancement revoke @s only dev:ranged_indicator
+advancement revoke @s only base:damage_indicator
+advancement revoke @s only base:ranged_indicator

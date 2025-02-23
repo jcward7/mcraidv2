@@ -1,0 +1,1 @@
+execute if score @a[tag=recentDamager,limit=1] damageTracker > @e[tag=dummy,limit=1] damageTracker run function base:damage_indicator
