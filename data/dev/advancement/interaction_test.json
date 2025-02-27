@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "shield_interaction": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:interaction"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "dev:interaction_test"
+    }
+}

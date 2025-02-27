@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "armorstand": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:armor_stand"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "dev:success"
+    }
+}
