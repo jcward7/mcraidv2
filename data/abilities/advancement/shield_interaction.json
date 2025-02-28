@@ -1,0 +1,16 @@
+{
+    "criteria": {
+        "shield_interaction": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:interaction",
+					"nbt": "{Tags:[\"shield_orbit\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "abilities:shield_interaction"
+    }
+}

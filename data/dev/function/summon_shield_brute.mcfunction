@@ -1,1 +1,4 @@
-summon piglin_brute ~ ~ ~ {HasVisualFire:0b,CustomNameVisible:0b,PersistenceRequired:1b,CanPickUpLoot:0b,IsImmuneToZombification:1b,Tags:["shield_brute"],CustomName:'{"bold":true,"color":"white","text":"Shielding Brute"}',HandItems:[{id:"minecraft:iron_axe",count:1,components:{"minecraft:enchantment_glint_override":true}},{id:"minecraft:iron_axe",count:1,components:{"minecraft:enchantment_glint_override":true}}]}
+summon piglin_brute ~ ~ ~ {HasVisualFire:0b,CustomNameVisible:0b,PersistenceRequired:1b,CanPickUpLoot:0b,IsImmuneToZombification:1b,Tags:["shield_brute"],CustomName:'{"bold":true,"color":"white","text":"Shield Brute"}',HandItems:[{id:"minecraft:iron_axe",count:1,components:{"minecraft:enchantment_glint_override":true}},{id:"minecraft:iron_axe",count:1,components:{"minecraft:enchantment_glint_override":true}}]}
+scoreboard players set Engaged shieldBruteTimer 0
+scoreboard players set EngagedCooldown shieldBruteTimer 0
+scoreboard players set Armor shieldBruteTimer 0
