@@ -63,6 +63,9 @@ execute if entity @e[tag=dummy,scores={warpedCooking=2}] as @e[tag=hyphae] at @e
 execute at @e[tag=cooking_animator] if entity @e[tag=dummy,scores={warpedCooking=3..22}] run tp @e[tag=hyphae] ~ ~10 ~
 execute if entity @e[tag=dummy,scores={warpedCooking=23}] run kill @e[tag=cooking_animator]
 
+execute if entity @e[tag=dummy,scores={warpedCooking=60}] run execute positioned 243.5 117 143.5 run function dev:summon_hybrid_piglin
+execute if entity @e[tag=dummy,scores={warpedCooking=60}] run execute positioned 243.5 117 159.5 run function dev:summon_hybrid_piglin
+
 
 execute if entity @e[tag=dummy,scores={warpedCooking=380}] run data merge entity @e[tag=hyphae,limit=1] {ArmorItems:[{},{},{},{id:"minecraft:warped_hyphae",count:1,components:{"minecraft:equippable":{slot:"head",equip_sound:"block.chorus_flower.death",allowed_entities:"armor_stand",swappable:false},"minecraft:enchantment_glint_override":true,"minecraft:custom_name":'{"bold":true,"color":"dark_purple","text":"Active Warped Core"}'}}]}
 execute if entity @e[tag=dummy,scores={warpedCooking=380}] run data modify entity @e[tag=hyphae,limit=1] DisabledSlots set value 47

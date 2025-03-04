@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "shield_interaction": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+                "entity": {
+					"nbt": "{Tags:[\"blocking\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "abilities:blocking_tag"
+    }
+}

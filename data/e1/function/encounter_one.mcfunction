@@ -41,10 +41,13 @@ execute if entity @e[type=armor_stand,tag=deposits,nbt={ArmorItems:[{},{},{},{id
 
 execute if entity @e[tag=dummy,scores={encounter1=2400..}] run kill @e[tag=hyphae]
 execute if entity @e[tag=dummy,scores={encounter1=2400..}] run kill @e[tag=wellkeeper]
+execute if entity @e[tag=dummy,scores={encounter1=2400..}] run kill @e[tag=shield_brute]
+execute if entity @e[tag=dummy,scores={encounter1=2400..}] run kill @e[tag=hybrid_piglin]
 execute if entity @e[tag=dummy,scores={encounter1=2400..}] run kill @e[tag=north_deposit]
 execute if entity @e[tag=dummy,scores={encounter1=2400..}] run kill @e[tag=east_deposit]
 execute if entity @e[tag=dummy,scores={encounter1=2400..}] run kill @e[tag=south_deposit]
 execute if entity @e[tag=dummy,scores={encounter1=2400..}] run kill @e[tag=west_deposit]
+execute if entity @e[tag=dummy,scores={encounter1=2400..}] run scoreboard players set spawnCounter encounter1 0
 execute if entity @e[tag=dummy,scores={encounter1=2400..}] run scoreboard players set @a wellkeepersKilled 0
 execute if entity @e[tag=dummy,scores={encounter1=2400..}] run scoreboard players set @e[tag=dummy] warpedWell 0
 execute if entity @e[tag=dummy,scores={encounter1=2400..}] run scoreboard players set @e[tag=dummy] crimsonWell 0

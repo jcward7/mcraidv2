@@ -2,16 +2,21 @@
 execute if score Engaged shieldBruteTimer matches 0 run execute as @e[tag=shield_brute] at @e[tag=shield_brute] if entity @e[type=player,distance=..8] run scoreboard players set Engaged shieldBruteTimer 1
 execute if score Engaged shieldBruteTimer matches 0 run execute as @e[tag=shield_brute] at @e[tag=shield_brute] if entity @e[type=player,distance=..8] run scoreboard players set @s shieldBruteTimer 0
 
-#basic block attack idea
-#possible make this into a mechanic where he stands still to block damage
-#this would allow the shields to be broken easier
-#execute if score shieldsActive shieldBruteTimer matches 0 run execute if entity @e[tag=shield_brute,nbt={HurtTime:1s}] run scoreboard players set blockAttack shieldBruteTimer 1
-#execute if score blockAttack shieldBruteTimer matches 1 run data merge entity @e[tag=shield_brute,limit=1] {HandItems:[{components:{},id:"minecraft:shield"},{components:{},id:"minecraft:shield"}]}
-#execute if score blockAttack shieldBruteTimer matches 1 run effect give @e[tag=shield_brute] minecraft:resistance 2 10 true
-#execute if score blockAttack shieldBruteTimer matches 1 run scoreboard players add blockAttackTimer shieldBruteTimer 1
-#execute if score blockAttackTimer shieldBruteTimer matches 40.. run scoreboard players set blockAttack shieldBruteTimer 0
-#execute if score blockAttackTimer shieldBruteTimer matches 40.. run data merge entity @e[tag=shield_brute,limit=1] {HandItems:[{components:{},id:"minecraft:iron_sword"},{components:{},id:"minecraft:shield"}]}
-#execute if score blockAttackTimer shieldBruteTimer matches 40.. run scoreboard players set blockAttackTimer shieldBruteTimer 0
+#basic block attack during normal combat
+execute if score shieldsActive shieldBruteTimer matches 0 run execute if entity @e[tag=shield_brute,nbt={HurtTime:1s}] run scoreboard players set blockAttack shieldBruteTimer 1
+execute if score blockAttack shieldBruteTimer matches 1 run scoreboard players add blockAttackTimer shieldBruteTimer 1
+execute if score blockAttackTimer shieldBruteTimer matches 1 run data merge entity @e[tag=shield_brute,limit=1] {HandItems:[{components:{},id:"minecraft:shield"},{components:{},id:"minecraft:shield"}]}
+execute if score blockAttackTimer shieldBruteTimer matches 1 run effect give @e[tag=shield_brute] minecraft:resistance 2 10 true
+execute if score blockAttackTimer shieldBruteTimer matches 1 run attribute @e[tag=shield_brute,limit=1] minecraft:movement_speed base set 0
+execute if score blockAttackTimer shieldBruteTimer matches 1 run attribute @e[tag=shield_brute,limit=1] minecraft:knockback_resistance base set 100
+execute if score blockAttackTimer shieldBruteTimer matches 1 run tag @e[tag=shield_brute,limit=1] add blocking
+execute if score blockAttackTimer shieldBruteTimer matches 30 run data merge entity @e[tag=shield_brute,limit=1] {HandItems:[{components:{},id:"minecraft:iron_sword"},{components:{},id:"minecraft:shield"}]}
+execute if score blockAttackTimer shieldBruteTimer matches 30 run attribute @e[tag=shield_brute,limit=1] minecraft:movement_speed base set 0.3499999940395355
+execute if score blockAttackTimer shieldBruteTimer matches 30 run attribute @e[tag=shield_brute,limit=1] minecraft:knockback_resistance base set 0
+execute if score blockAttackTimer shieldBruteTimer matches 30 run tag @e[tag=shield_brute,limit=1] remove blocking
+execute if score blockAttackTimer shieldBruteTimer matches 30 run effect clear @e[tag=shield_brute] minecraft:resistance
+execute if score blockAttackTimer shieldBruteTimer matches 100.. run scoreboard players set blockAttack shieldBruteTimer 0
+execute if score blockAttackTimer shieldBruteTimer matches 100.. run scoreboard players set blockAttackTimer shieldBruteTimer 0
 
 #Begin shielding ability countdown once player tries to leave combat
 execute if score Engaged shieldBruteTimer matches 1 run execute if score shieldsActive shieldBruteTimer matches 0 run execute as @e[tag=shield_brute] at @e[tag=shield_brute] if entity @e[type=player,distance=12..] run scoreboard players add @s shieldBruteTimer 1
@@ -51,6 +56,9 @@ execute if score shieldsActive shieldBruteTimer matches 1 run summon interaction
 execute if score shieldsActive shieldBruteTimer matches 1 run tag @e[tag=shield_brute] add shielded
 execute if score shieldsActive shieldBruteTimer matches 1 run scoreboard players set shieldsActive shieldBruteTimer 2
 #While shields are active:
+#TO-DO: implement a mechanic to stun the piglin that does either or both:
+#Stop the piglin from moving
+#stop the shields from moving
 execute if score shieldsActive shieldBruteTimer matches 2 run execute as @e[tag=shield_center] at @s run tp @s ~ ~ ~ ~5 ~
 execute if score shieldsActive shieldBruteTimer matches 2 run execute as @e[tag=shield_center] at @s run tp @e[tag=shield_orbit1] ^3 ^ ^1 facing ^1 ^ ^0.9
 execute if score shieldsActive shieldBruteTimer matches 2 run execute as @e[tag=shield_center] at @s run tp @e[tag=shield_orbit2] ^-2.8 ^ ^1.2 facing ^1 ^ ^0.9

@@ -1,7 +1,9 @@
-execute as @e[type=player] at @e[type=player] if block ~ ~-1 ~ minecraft:crimson_planks run schedule function e1:warped_temp_trigger 60t
+execute as @e[type=player] at @e[type=player] if block ~ ~-1 ~ minecraft:crimson_planks run schedule function e1:warped_temp_trigger 140t
+execute as @s at @s run playsound minecraft:block.respawn_anchor.set_spawn master @a ~ ~ ~ 25 2 1
 
 #Warped Well 1
 execute as @e[type=player] at @e[type=player] if block ~ ~-1 ~ minecraft:warped_planks if entity @e[tag=dummy,scores={crimsonWell=0,warpedWell=1}] run tp @s 212 134 182
+execute if score spawnCounter encounter1 matches 0..4 run function e1:spawn_counter_process
 execute if entity @e[tag=dummy,scores={crimsonWell=0,warpedWell=1}] run fill 265 117 173 267 117 175 minecraft:polished_blackstone
 execute if entity @e[tag=dummy,scores={crimsonWell=0,warpedWell=1}] run fill 264 118 172 268 118 172 minecraft:blackstone_stairs[facing=north]
 execute if entity @e[tag=dummy,scores={crimsonWell=0,warpedWell=1}] run fill 268 118 172 268 118 176 minecraft:blackstone_stairs[facing=east]

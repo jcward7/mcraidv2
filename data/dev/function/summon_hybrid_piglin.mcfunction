@@ -1,0 +1,2 @@
+summon piglin ~ ~ ~ {Inventory:[{}],DeathLootTable:"minecraft:empty",PersistenceRequired:1b,CanPickUpLoot:0b,Health:25f,IsImmuneToZombification:1b,Tags:["hybrid_piglin"],CustomName:'"Hybrid Piglin"',HandItems:[{id:"minecraft:iron_sword",count:1},{}],attributes:[{id:"minecraft:attack_speed",base:4},{id:"minecraft:follow_range",base:25},{id:"minecraft:max_health",base:25}]}
+execute at @e[tag=hybrid_piglin] as @s run playsound minecraft:entity.piglin.jealous master @a ~ ~ ~ 5 0.8 1
